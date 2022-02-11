@@ -16,7 +16,6 @@ Feature: Securely log into the system
       | password | PwX8EMTbnbshxfQ          |
     Then the user registration should be successful.
 
-  @RegressionTest
   @Test
   Scenario: Registration by phone
     Given the user on the user registration page

@@ -9,6 +9,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import pageactions.HeaderLayoutAction;
 import pageactions.RegistrationAction;
 import pageactions.SignInAction;
@@ -84,6 +86,8 @@ public class loginStepdefs extends BaseTest {
     }
     @AfterStep
     public void afterStep(Scenario scenario) {
-
+        byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+        String nombreimagen= "image"+System.currentTimeMillis();
+        scenario.attach(screenshot, "image/png",nombreimagen);
     }
 }
