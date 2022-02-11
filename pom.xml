@@ -47,6 +47,21 @@
       <version>7.2.3</version>
       <scope>test</scope>
     </dependency>
+    <!-- ExtentReports library for Cucumber-->
+    <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
+    <dependency>
+      <groupId>com.vimalselvam</groupId>
+      <artifactId>cucumber-extentsreport</artifactId>
+      <version>3.1.1</version>
+    </dependency>
+    <!-- ExtentReports library -->
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version>
+    </dependency>
+
     <!-- Automated driver management and Docker builder for Selenium WebDriver -->
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
     <dependency>
