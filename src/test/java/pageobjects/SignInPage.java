@@ -13,12 +13,17 @@ public class SignInPage {
     private By inputPassword;
     private By checkRememberMe;
     private By linkForgotPassword;
+    private By btnSignIn;
+    private By pageTitle;
 
     public  SignInPage(WebDriver driver){
         inputLoginName=By.id("UserLogin_username");
         inputPassword=By.id("UserLogin_password");
         checkRememberMe=By.xpath("//form/fieldset[1]/div[3]/div/label");
         linkForgotPassword=By.xpath("//form/fieldset[1]/div[3]/a");
+        btnSignIn=By.xpath("//form/fieldset[2]/button");
+        pageTitle=By.xpath("//main/div/div[1]/div/div[1]/h2");
+
     }
 
     public By getInputLoginName() {
@@ -37,4 +42,11 @@ public class SignInPage {
         return linkForgotPassword;
     }
 
+    public By getPageTitle() {
+        return pageTitle;
+    }
+
+    public By getBtnSignIn() {
+        return btnSignIn;
+    }
 }

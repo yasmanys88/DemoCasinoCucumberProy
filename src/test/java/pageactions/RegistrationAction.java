@@ -1,14 +1,51 @@
 package pageactions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pageobjects.RegistrationPage;
 
-public class RegistrationAction extends MainPageAction{
+public class RegistrationAction extends MainPageAction {
 
-    private RegistrationAction registrationAction;
+    private RegistrationPage registrationPage;
 
     public RegistrationAction(WebDriver driver) {
         super(driver);
-        registrationAction = new RegistrationAction(driver);
+        registrationPage = new RegistrationPage();
     }
+
+    public String getTitle() {
+        return getPageTitle(getElement(registrationPage.getPageTitle()));
+    }
+
+    public void resgisterUser(String type, String registrationForm, String currency, String password) {
+        if (type.equals("Email")) {
+            getElement(registrationPage.getOptionEmail()).click();
+            getElement(registrationPage.getInputEmail()).sendKeys(registrationForm);
+        } else {
+            getElement(registrationPage.getOptionPhoneNumber()).click();
+            getElement(registrationPage.getInputPhoneNumber()).sendKeys(registrationForm);
+        }
+        switch (currency) {
+            case "USD":
+                getElement(registrationPage.getOptionUSD()).click();
+                break;
+            case "EUR":
+                getElement(registrationPage.getOptionEUR()).click();
+                break;
+            case "mBTC":
+                getElement(registrationPage.getOptionmBTC()).click();
+                break;
+            case "mETH":
+                getElement(registrationPage.getOptionmETH()).click();
+                break;
+            default:
+                break;
+        }
+        getElement(registrationPage.getInputPassword()).sendKeys(password);
+        getElement(registrationPage.getInputPasswordConfirmation()).sendKeys(password);
+        getElement(registrationPage.getComboAgree()).click();
+        getElement(registrationPage.getBtnRegister()).click();
+    }
+
 
 }

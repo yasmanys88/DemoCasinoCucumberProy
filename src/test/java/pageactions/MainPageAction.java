@@ -37,4 +37,8 @@ public class MainPageAction {
         }
     }
 
+    public String getPageTitle(WebElement elem){
+        return elem.getText();
+    }
+
 }

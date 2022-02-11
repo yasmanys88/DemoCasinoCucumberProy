@@ -22,6 +22,8 @@ public class RegistrationPage {
     private By comboAgree;
     private By btnRegister;
     private By linkSignIn;
+    private By pageTitle;
+
 
     public  RegistrationPage(){
         optionEmail= By.xpath("//div/div[3]/div/ul/li[1]");
@@ -37,6 +39,7 @@ public class RegistrationPage {
         comboAgree= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation");
         btnRegister= By.xpath("//form/fieldset[3]/button");
         linkSignIn= By.xpath("//form/div[2]/a");
+        pageTitle=By.xpath("//main/div/div[1]/div/div[1]/h2");
     }
 
     public By getOptionEmail() {
@@ -89,5 +92,9 @@ public class RegistrationPage {
 
     public By getLinkSignIn() {
         return linkSignIn;
+    }
+
+    public By getPageTitle() {
+        return pageTitle;
     }
 }

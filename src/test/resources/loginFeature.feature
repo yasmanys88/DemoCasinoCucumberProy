@@ -9,23 +9,19 @@ Feature: Securely log into the system
   Scenario: Registration by email
     Given the user on the user registration page
     When the user enter select registration by email and enter all the required details
-      | Fields    | Values                   |
-      | email     | automationtest@gmail.com |
-      | currency  | EUR                      |
-      | password  | PwX8EMTbnbshxfQ          |
-      | terminus  | agree                    |
-      | enterCode | Preeti                   |
+      | Fields   | Values                   |
+      | email    | automationtest@gmail.com |
+      | currency | EUR                      |
+      | password | PwX8EMTbnbshxfQ          |
     Then the user registration should be successful.
 
   Scenario: Registration by phone
     Given the user on the user registration page
     When the user enter select registration by phone and enter all the required details
-      | Fields    | Values          |
-      | phone     | 59893453401     |
-      | currency  | EUR             |
-      | password  | PwX8EMTbnbshxfQ |
-      | terminus  | agree           |
-      | enterCode | Preeti          |
+      | Fields   | Values          |
+      | phone    | 59893453401     |
+      | currency | EUR             |
+      | password | PwX8EMTbnbshxfQ |
     Then the user registration should be successful.
 
   Scenario Outline: Access to site with valid credentials
