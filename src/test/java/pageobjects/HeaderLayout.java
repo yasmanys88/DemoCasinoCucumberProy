@@ -9,24 +9,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HeaderLayout {
 
-    @FindBy(how= How.XPATH,using = "//header/div/div[2]/div[2]/a[1]")
-    private WebElement btnSigIn;
+    private By btnSigIn;
+    private By btnRegistration;
 
-    @FindBy(how= How.XPATH,using = "//header/div/div[2]/div[2]/a[2]")
-    private WebElement btnRegistration;
-
-    private WebDriver driver;
-
-    public  HeaderLayout(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
+    public  HeaderLayout(){
+        btnSigIn= By.xpath("//header/div/div[2]/div[2]/a[1]");
+        btnRegistration= By.xpath("//header/div/div[2]/div[2]/a[2]");
     }
 
-    public WebElement getBtnSigIn() {
+    public By getBtnSigIn() {
         return btnSigIn;
     }
 
-    public WebElement getBtnRegistration() {
+    public By getBtnRegistration() {
         return btnRegistration;
     }
 

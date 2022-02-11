@@ -1,5 +1,6 @@
 package pageobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,103 +8,86 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class RegistrationPage {
-    @FindBy(how= How.XPATH,using = "//div/div[3]/div/ul/li[1]")
-    private WebElement optionEmail;
 
-    @FindBy(how= How.XPATH,using = "//div/div[3]/div/ul/li[2]")
-    private WebElement optionPhoneNumber;
+    private By optionEmail;
+    private By optionPhoneNumber;
+    private By inputEmail;
+    private By inputPhoneNumber;
+    private By optionUSD;
+    private By optionEUR;
+    private By optionmBTC;
+    private By optionmETH;
+    private By inputPassword;
+    private By inputPasswordConfirmation;
+    private By comboAgree;
+    private By btnRegister;
+    private By linkSignIn;
 
-    @FindBy(how= How.ID,using = "core__protected_modules_user_yiiForm_RegistrationForm_email")
-    private WebElement inputEmail;
-
-    @FindBy(how= How.ID,using = "core__protected_modules_user_yiiForm_RegistrationForm_phone")
-    private WebElement inputPhoneNumber;
-
-    @FindBy(how= How.XPATH,using = "//form/fieldset[2]/div[1]/div[1]/div[1]/label")
-    private WebElement optionUSD;
-
-    @FindBy(how= How.XPATH,using = "//form/fieldset[2]/div[1]/div[1]/div[2]/label")
-    private WebElement optionEUR;
-
-    @FindBy(how= How.XPATH,using = "//form/fieldset[2]/div[1]/div[1]/div[3]/label")
-    private WebElement optionmBTC;
-
-    @FindBy(how= How.XPATH,using = "//form/fieldset[2]/div[1]/div[1]/div[4]/label")
-    private WebElement optionmETH;
-
-    @FindBy(how= How.ID,using = "core__protected_modules_user_yiiForm_RegistrationForm_password")
-    private WebElement inputPassword;
-
-    @FindBy(how= How.ID,using = "core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation")
-    private WebElement inputPasswordConfirmation;
-
-    @FindBy(how= How.ID,using = "core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation")
-    private WebElement comboAgree;
-
-    @FindBy(how= How.XPATH,using = "//form/fieldset[3]/button")
-    private WebElement btnRegister;
-
-    @FindBy(how= How.XPATH,using = "//form/div[2]/a")
-    private WebElement linkSignIn;
-
-    private WebDriver driver;
-
-    public  RegistrationPage(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
+    public  RegistrationPage(){
+        optionEmail= By.xpath("//div/div[3]/div/ul/li[1]");
+        optionPhoneNumber= By.xpath("//div/div[3]/div/ul/li[2]");
+        inputEmail= By.id("core__protected_modules_user_yiiForm_RegistrationForm_email");
+        inputPhoneNumber= By.id("core__protected_modules_user_yiiForm_RegistrationForm_phone");
+        optionUSD= By.xpath("//form/fieldset[2]/div[1]/div[1]/div[2]/label");
+        optionEUR= By.xpath("//form/fieldset[2]/div[1]/div[1]/div[2]/label");
+        optionmBTC= By.xpath("//form/fieldset[2]/div[1]/div[1]/div[3]/label");
+        optionmETH= By.xpath("//form/fieldset[2]/div[1]/div[1]/div[4]/label");
+        inputPassword= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password");
+        inputPasswordConfirmation= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation");
+        comboAgree= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation");
+        btnRegister= By.xpath("//form/fieldset[3]/button");
+        linkSignIn= By.xpath("//form/div[2]/a");
     }
 
-    public WebElement getOptionEmail() {
+    public By getOptionEmail() {
         return optionEmail;
     }
 
-    public WebElement getOptionPhoneNumber() {
+    public By getOptionPhoneNumber() {
         return optionPhoneNumber;
     }
 
-    public WebElement getInputEmail() {
+    public By getInputEmail() {
         return inputEmail;
     }
 
-    public WebElement getInputPhoneNumber() {
+    public By getInputPhoneNumber() {
         return inputPhoneNumber;
     }
 
-    public WebElement getOptionUSD() {
+    public By getOptionUSD() {
         return optionUSD;
     }
 
-    public WebElement getOptionEUR() {
+    public By getOptionEUR() {
         return optionEUR;
     }
 
-    public WebElement getOptionmBTC() {
+    public By getOptionmBTC() {
         return optionmBTC;
     }
 
-    public WebElement getOptionmETH() {
+    public By getOptionmETH() {
         return optionmETH;
     }
 
-    public WebElement getInputPassword() {
+    public By getInputPassword() {
         return inputPassword;
     }
 
-    public WebElement getInputPasswordConfirmation() {
+    public By getInputPasswordConfirmation() {
         return inputPasswordConfirmation;
     }
 
-    public WebElement getComboAgree() {
+    public By getComboAgree() {
         return comboAgree;
     }
 
-    public WebElement getBtnRegister() {
+    public By getBtnRegister() {
         return btnRegister;
     }
 
-    public WebElement getLinkSignIn() {
+    public By getLinkSignIn() {
         return linkSignIn;
     }
-
-
 }
