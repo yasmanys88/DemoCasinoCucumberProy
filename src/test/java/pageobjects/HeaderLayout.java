@@ -30,7 +30,4 @@ public class HeaderLayout {
         return btnRegistration;
     }
 
-    public WebDriver getDriver() {
-        return driver;
-    }
 }
