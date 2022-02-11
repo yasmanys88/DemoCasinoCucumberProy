@@ -46,6 +46,7 @@ public class loginStepdefs extends BaseTest {
     public void the_user_registration_should_be_successful() {
         //I put this step through but it can't really be automated because we have a captcha
        Assert.assertEquals("User registration error",true,true);
+        tearDown();
     }
 
     @When("the user enter select registration by phone and enter all the required details:")
@@ -71,6 +72,7 @@ public class loginStepdefs extends BaseTest {
     public void the_user_login_should_be_successful() {
         //I put this step through but it can't really be automated because we have a captcha
         Assert.assertEquals("You have not logged in",true,true);
+        tearDown();
     }
 
 }
