@@ -25,4 +25,7 @@ public class HeaderLayout {
         return btnRegistration;
     }
 
+    public By getUser_info__wrapper() {
+        return By.xpath("/html/body/div[1]/header/div/div[2]/div[2]/div");
+    }
 }

@@ -19,5 +19,7 @@ public class HeaderLayoutAction extends MainPageAction{
         getElement(headerLayout.getBtnRegistration()).click();
     }
 
-
+    public boolean homepage(){
+        return getElement(headerLayout.getUser_info__wrapper()).isDisplayed();
+    }
 }

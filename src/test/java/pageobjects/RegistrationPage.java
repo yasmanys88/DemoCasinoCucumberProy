@@ -36,7 +36,7 @@ public class RegistrationPage {
         optionmETH= By.xpath("//form/fieldset[2]/div[1]/div[1]/div[4]/label");
         inputPassword= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password");
         inputPasswordConfirmation= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation");
-        comboAgree= By.id("core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation");
+        comboAgree= By.xpath("//*[@id='registration_form_1']/fieldset[2]/div[4]/label");
         btnRegister= By.xpath("//form/fieldset[3]/button");
         linkSignIn= By.xpath("//form/div[2]/a");
         pageTitle=By.xpath("//main/div/div[1]/div/div[1]/h2");
