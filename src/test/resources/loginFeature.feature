@@ -1,6 +1,11 @@
 Feature: Securely log into the system
   Verify that the new user registration is successful.
 
+  Background:
+    Given the user open "Chrome" browser
+    When the user navigates to "demo.casino"
+    Then the user should be in home page
+
   Scenario: Registration by email
     Given the user on the user registration page
     When the user enter select registration by email and enter all the required details
