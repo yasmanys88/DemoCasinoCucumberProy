@@ -5,6 +5,8 @@ Feature: Securely log into the system
     Given the user open "Chrome" browser
     When the user navigates to "https://demo.casino/"
 
+  @RegressionTest
+  @Test
   Scenario: Registration by email
     Given the user on the user registration page
     When the user enter select registration by email and enter all the required details:
@@ -14,6 +16,8 @@ Feature: Securely log into the system
       | password | PwX8EMTbnbshxfQ          |
     Then the user registration should be successful.
 
+  @RegressionTest
+  @Test
   Scenario: Registration by phone
     Given the user on the user registration page
     When the user enter select registration by phone and enter all the required details:
@@ -23,6 +27,8 @@ Feature: Securely log into the system
       | password | PwX8EMTbnbshxfQ |
     Then the user registration should be successful.
 
+  @RegressionTest
+  @Test
   Scenario Outline: Access to site with valid credentials
     Given the user on the user sign in page
     When the user enter her "<credential>" and "<password>"
