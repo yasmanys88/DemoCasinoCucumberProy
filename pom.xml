@@ -47,12 +47,33 @@
       <version>7.2.3</version>
       <scope>test</scope>
     </dependency>
-    <!-- ExtentReports library for Cucumber-->
-    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
     <dependency>
-      <groupId>com.aventstack</groupId>
-      <artifactId>extentreports-cucumber4-adapter</artifactId>
-      <version>1.2.1</version>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-picocontainer</artifactId>
+      <version>7.2.3</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>gherkin</artifactId>
+      <version>22.0.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-jvm</artifactId>
+      <version>7.2.3</version>
+      <type>pom</type>
+    </dependency>
+
+    <!-- ExtentReports library for Cucumber-->
+    <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>extentreports-cucumber7-adapter</artifactId>
+      <version>1.2.0</version>
     </dependency>
 
     <!-- ExtentReports library -->

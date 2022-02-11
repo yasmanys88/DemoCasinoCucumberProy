@@ -1,6 +1,10 @@
 package steps;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,6 +13,7 @@ import pageactions.HeaderLayoutAction;
 import pageactions.RegistrationAction;
 import pageactions.SignInAction;
 import utils.BaseTest;
+
 import java.util.List;
 
 public class loginStepdefs extends BaseTest {
@@ -39,21 +44,20 @@ public class loginStepdefs extends BaseTest {
     public void the_user_enter_select_registration_by_email_and_enter_all_the_required_details(DataTable dataTable) {
         List<List<String>> data = dataTable.asLists(String.class);
         resgistrationAction.resgisterUser(data.get(1).get(0),data.get(1).get(1),data.get(2).get(1),data.get(3).get(1));
-        System.out.println(resgistrationAction.getTitle());
+        resgistrationAction.getTitle();
     }
 
     @Then("the user registration should be successful.")
     public void the_user_registration_should_be_successful() {
         //I put this step through but it can't really be automated because we have a captcha
        Assert.assertEquals("User registration error",true,true);
-        tearDown();
     }
 
     @When("the user enter select registration by phone and enter all the required details:")
     public void the_user_enter_select_registration_by_phone_and_enter_all_the_required_details(DataTable dataTable) {
         List<List<String>> data = dataTable.asLists(String.class);
         resgistrationAction.resgisterUser(data.get(1).get(0),data.get(1).get(1),data.get(2).get(1),data.get(3).get(1));
-        System.out.println(resgistrationAction.getTitle());
+        resgistrationAction.getTitle();
     }
 
     @Given("the user on the user sign in page")
@@ -72,7 +76,14 @@ public class loginStepdefs extends BaseTest {
     public void the_user_login_should_be_successful() {
         //I put this step through but it can't really be automated because we have a captcha
         Assert.assertEquals("You have not logged in",true,true);
-        tearDown();
     }
 
+    @After
+    public void closeBrowser(Scenario scenario) {
+            tearDown();
+    }
+    @AfterStep
+    public void afterStep(Scenario scenario) {
+
+    }
 }
