@@ -9,8 +9,8 @@ The main problem that exists on this site is the captcha, so it is assumed that 
 <br>
 <br>
 The normal flow<br>
-The user open the browser, after user navigates to "site and go to registration page and enter select registration by email and enter all the required details then the user registration should be successful.<br>
+The user open the browser, after user navigates to site and go to registration page and enter select registration by email and enter all the required details then the user registration should be successful.<br>
 
-The user open the browser, after user navigates to "site and go to registration page and enter select registration by phone and enter all the required details then the user registration should be successful.<br>
+The user opens the browser, after the user navigates to site and go to the registration page and enter select registration by phone and enter all the required details then the user registration should be successful.<br>
   
-The user open the browser, after user navigates to "site and go to sign in page and user enter her credential and password then the user sign in should be successful.<br>
+The user opens the browser, after the user navigates to site and go to sign in page and the user enters her credential and password then the user sign in should be successful.<br>
