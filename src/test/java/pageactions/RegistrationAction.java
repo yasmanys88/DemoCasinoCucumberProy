@@ -49,7 +49,7 @@ public class RegistrationAction extends MainPageAction {
         getElement(registrationPage.getInputPasswordConfirmation()).sendKeys(password);
         //I agree with the policy
         getElement(registrationPage.getComboAgree()).click();
-        //I click on the registration button
+        //click on the registration button
         getElement(registrationPage.getBtnRegister()).click();
     }
 

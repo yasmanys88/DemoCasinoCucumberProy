@@ -16,8 +16,11 @@ public class SignInAction extends MainPageAction {
     }
 
     public void actionSignIn(String credential, String password) {
+        //I write the credential
         getElement(signInPage.getInputLoginName()).sendKeys(credential);
+        //I write the password
         getElement(signInPage.getInputPassword()).sendKeys(password);
+        //click on the Sign In button
         getElement(signInPage.getBtnSignIn()).click();
     }
 
