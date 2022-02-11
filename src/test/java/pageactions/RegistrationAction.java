@@ -18,6 +18,7 @@ public class RegistrationAction extends MainPageAction {
     }
 
     public void resgisterUser(String type, String registrationForm, String currency, String password) {
+       //if the type is email then I can register by email otherwise only register by phone
         if (type.equals("Email")) {
             getElement(registrationPage.getOptionEmail()).click();
             getElement(registrationPage.getInputEmail()).sendKeys(registrationForm);
@@ -25,6 +26,7 @@ public class RegistrationAction extends MainPageAction {
             getElement(registrationPage.getOptionPhoneNumber()).click();
             getElement(registrationPage.getInputPhoneNumber()).sendKeys(registrationForm);
         }
+        //According to the type of currency selected I click on the radiobutton
         switch (currency) {
             case "USD":
                 getElement(registrationPage.getOptionUSD()).click();
@@ -41,9 +43,13 @@ public class RegistrationAction extends MainPageAction {
             default:
                 break;
         }
+        //I write the password
         getElement(registrationPage.getInputPassword()).sendKeys(password);
+        //I write the password Confirmation
         getElement(registrationPage.getInputPasswordConfirmation()).sendKeys(password);
+        //I agree with the policy
         getElement(registrationPage.getComboAgree()).click();
+        //I click on the registration button
         getElement(registrationPage.getBtnRegister()).click();
     }
 
